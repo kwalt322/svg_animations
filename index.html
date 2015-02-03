@@ -273,24 +273,18 @@ $(document).ready(function(){
 	})
 
 
-	// var state = 'erase';
+	var state = 'erase';
 
-	$('#btnCrystal').on('click', function(){
-		// state = (state === 'erase') ? 'paint':'erase' ;
-		$('#crystal').lazylinepainter('paint');
-	});
-
-
-	$('#btnPhone').on('click', function(){
-		// state = (state === 'erase') ? 'paint':'erase' ;
-		$('#phone').lazylinepainter('paint');
+	$('#buttonInitiate').on('click', function(){
+		state = (state === 'erase') ? 'paint':'erase' ;
+		$('.icon').lazylinepainter(state);
 	});
 })
 
 })( jQuery );
 
 		</script>
-    </head> 
+    </head>
 
 
 
@@ -303,10 +297,8 @@ $(document).ready(function(){
     <body>
 
         <div id="crystal" class="icon"></div>
-        <button type="button" id="btnCrystal">Crystal</button>
 
         <div id="phone" class="icon"></div>
-        <button type="button" id="btnPhone">Phone</button>
 
         <div id="location" class="icon"></div>
 
@@ -314,7 +306,7 @@ $(document).ready(function(){
 
         <div id="account" class="icon"></div>
 
-        
+        <button type="button" id="buttonInitiate">Initiate</button>
 
     </body>
 </html>
