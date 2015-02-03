@@ -220,12 +220,13 @@
 
 $(document).ready(function(){
 
-	$('#crystal').lazylinepainter({
-			'svgData' : svgCrystal,
-			'strokeWidth':5,
-			'strokeColor':'#912470',	
-		})
 
+// Initiate Objects
+	$('#crystal').lazylinepainter({
+		'svgData' : svgCrystal,
+		'strokeWidth':5,
+		'strokeColor':'#912470',	
+	})
 
 	$('#location').lazylinepainter({
 		'svgData' : svgLocation,
@@ -246,13 +247,10 @@ $(document).ready(function(){
 	})
 
 
-	// var state = 'erase';
-
+// Draw Objects on click
 	$('#btnCrystal').on('click', function(){
-		// state = (state === 'erase') ? 'paint':'erase' ;
 		$('#crystal').lazylinepainter('paint');
 	});
-
 
 	$('#btnLocation').on('click', function(){
 		$('#location').lazylinepainter('paint');
@@ -274,14 +272,7 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
     <body>
-
         <div id="crystal" class="icon"></div>
         <button type="button" id="btnCrystal" class="button">Crystal</button>
 
@@ -293,8 +284,5 @@ $(document).ready(function(){
 
         <div id="account" class="icon"></div>
         <button type="button" id="btnAccount" class="button">Account</button>
-
-        
-
     </body>
 </html>
