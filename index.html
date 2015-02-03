@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Swarovski SVG Icons</title>
+
+       <style>
+			body {
+				background:white;
+			}
+
+			.icon {
+				display:block;
+				float:left;
+				margin-left: 10px;
+			}
+
+
+		</style> 
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="jquery.lazylinepainter-1.5.1.js"></script>
+        <script type="text/javascript">
+			
+
+				/*
+				* Lazy Line Painter
+				* SVG Stroke animation.
+				*
+				* https://github.com/camoconnell/lazy-line-painter
+				*
+				* Copyright 2014
+				* Cam O'Connell - http://www.camoconnell.com  http://www.behance.net/camoconnell
+				* Released under the MIT license
+				*
+				*/
+
+(function( $ ){
+
+	var durat = 100; //duration for SVG
+
+	var svgCrystal = {
+	    "crystal": {
+	        "strokepath": [
+	            {
+	                "path": "M   13,73 64,120 115,73 91,46.4 36.4,46.4 13.4,72.5 L  13,73 64,120 115,73 91,46.4 36.4,46.4 13.4,72.5 ",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 64 120 L 64 74",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M55.6,46.4c0,0-6.6,21.9-6.5,22C49.1,68.5,64,74,64,74",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M49,68.4c0,0-14.8,5.5-14.9,5.6C34,74.1,64,120,64,120",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 93.9 74 L 111.2 68.8",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 34.1 74 L 16.7 68.8",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M78.9,68.4c0,0,14.9,5.5,14.9,5.6C94,74.1,64,120,64,120",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M72.4,46.4c0,0,6.6,21.9,6.5,22C78.9,68.5,64,74,64,74",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 64 30.6 L 64 8",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 41.1 30.6 L 31.3 15.9",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 86.9 30.6 L 96.7 15.9",
+	                "duration": durat
+	            }
+	        ],
+	        "dimensions": {
+	            "width": 128,
+	            "height": 128
+	        }
+	    }
+	}; 
+
+	var svgPhone = {
+	    "phone": {
+	        "strokepath": [
+	            {
+	                "path": "  M32.6,16c0.9-1,2.2-1.7,3.7-1.7H93c2.8,0,5,2.2,5,5v97.4c0,2.8-2.2,5-5,5H36.3c-2.8,0-5-2.2-5-5V19.4c0-1.1,0.4-2.1,1-2.9",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 34.7 31.7 L 98 31.7",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 34.7 95.9 L 98 95.9",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M65.4,106.9c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4s-2.4-1.1-2.4-2.4c0-1.2,0.8-2.1,2-2.3",
+	                "duration": durat
+	            }
+	        ],
+	        "dimensions": {
+	            "width": 130,
+	            "height": 149
+	        }
+	    }
+	};
+
+	var svgLocation = {
+	    "location": {
+	        "strokepath": [
+	            {
+	                "path": "  M64.7,125c-3.4-4.4-36.5-48.2-36.5-67.5c0-20.3,16.5-36.8,36.8-36.8s36.8,16.5,36.8,36.8S65,125.4,65,125.4s0-0.1-0.1-0.2",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M49.4,56.5c0.5-8.2,7.3-14.7,15.6-14.7c8.6,0,15.6,7,15.6,15.6s-7,15.6-15.6,15.6s-15.6-7-15.6-15.6c0-0.2,0-0.3,0-0.5",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 41.7 127.4 L 88.3 127.4",
+	                "duration": durat
+	            }
+	        ],
+	        "dimensions": {
+	            "width": 130,
+	            "height": 149
+	        }
+	    }
+	}; 
+
+	var svgCalendar = {
+	    "calendar": {
+	        "strokepath": [
+	            {
+	                "path": "  M17,31.9c0.9-1.1,2.3-1.7,3.8-1.7h89.3c2.8,0,5,2.2,5,5v89.3c0,2.8-2.2,5-5,5H20.8c-2.8,0-5-2.2-5-5V35.2c0-1.1,0.4-2.2,1-3",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 19 52.7 L 115.1 52.7",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M31.3,72.7c0.4-0.3,0.8-0.6,1.4-0.6h9.7c1.1,0,2,0.9,2,2v9.7c0,1.1-0.9,2-2,2h-9.7c-1.1,0-2-0.9-2-2v-9.7c0-0.4,0.1-0.8,0.4-1.1",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M31.3,101.2c0.4-0.3,0.8-0.6,1.4-0.6h9.7c1.1,0,2,0.9,2,2v9.7c0,1.1-0.9,2-2,2h-9.7c-1.1,0-2-0.9-2-2v-9.7c0-0.4,0.1-0.8,0.4-1.1",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M59.2,72.7c0.4-0.3,0.8-0.6,1.4-0.6h9.7c1.1,0,2,0.9,2,2v9.7c0,1.1-0.9,2-2,2h-9.7c-1.1,0-2-0.9-2-2v-9.7c0-0.4,0.1-0.8,0.4-1.1",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M59.2,101.2c0.4-0.3,0.8-0.6,1.4-0.6h9.7c1.1,0,2,0.9,2,2v9.7c0,1.1-0.9,2-2,2h-9.7c-1.1,0-2-0.9-2-2v-9.7c0-0.4,0.1-0.8,0.4-1.1",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M87.2,72.7c0.4-0.3,0.8-0.6,1.4-0.6h9.7c1.1,0,2,0.9,2,2v9.7c0,1.1-0.9,2-2,2h-9.7c-1.1,0-2-0.9-2-2v-9.7c0-0.4,0.1-0.8,0.4-1.1",
+	                "duration": durat
+	            },
+	            {
+	                "path": "  M87.2,101.2c0.4-0.3,0.8-0.6,1.4-0.6h9.7c1.1,0,2,0.9,2,2v9.7c0,1.1-0.9,2-2,2h-9.7c-1.1,0-2-0.9-2-2v-9.7c0-0.4,0.1-0.8,0.4-1.1",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 48.8 36.9 L 48.8 22.7",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 65.5 36.9 L 65.5 22.7",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 82.1 36.9 L 82.1 22.7",
+	                "duration": durat
+	            }
+	        ],
+	        "dimensions": {
+	            "width": 130,
+	            "height": 149
+	        }
+	    }
+	};
+
+	var svgAccount = {
+	    "account": {
+	        "strokepath": [
+	            {
+	                "path": "  M52.6,77c-13.3-0.3-24.1-11.2-24.1-24.6c0-13.6,11-24.6,24.6-24.6s24.6,11,24.6,24.6c0,13.4-10.8,24.3-24.1,24.6l-1,0.1  C30,77.4,11.8,95.8,11.8,118.5h82.6c0-22.7-18.3-41.1-40.9-41.3",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 87.6 42.2 L 118.2 42.2",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 90.8 58.4 L 118.2 58.4",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 82.3 74.6 L 118.2 74.6",
+	                "duration": durat
+	            },
+	            {
+	                "path": "M 94.4 89.2 L 118.2 89.2",
+	                "duration": durat
+	            }
+	        ],
+	        "dimensions": {
+	            "width": 130,
+	            "height": 149
+	        }
+	    }
+	}; 
+
+
+
+
+
+
+$(document).ready(function(){
+
+	$('#crystal').lazylinepainter({
+			'svgData' : svgCrystal,
+			'strokeWidth':5,
+			'strokeColor':'#912470',	
+		})
+
+	$('#phone').lazylinepainter({
+		'svgData' : svgPhone,
+		'strokeWidth':5,
+		'strokeColor':'#555555',
+	})
+
+	$('#location').lazylinepainter({
+		'svgData' : svgLocation,
+		'strokeWidth':5,
+		'strokeColor':'#ec0c6b',
+	})
+
+	$('#calendar').lazylinepainter({
+		'svgData' : svgCalendar,
+		'strokeWidth':5,
+		'strokeColor':'#c44195',
+	})
+
+	$('#account').lazylinepainter({
+		'svgData' : svgAccount,
+		'strokeWidth':5,
+		'strokeColor':'#000000',
+	})
+
+
+	// var state = 'erase';
+
+	$('#btnCrystal').on('click', function(){
+		// state = (state === 'erase') ? 'paint':'erase' ;
+		$('#crystal').lazylinepainter('paint');
+	});
+
+
+	$('#btnPhone').on('click', function(){
+		// state = (state === 'erase') ? 'paint':'erase' ;
+		$('#phone').lazylinepainter('paint');
+	});
+})
+
+})( jQuery );
+
+		</script>
+    </head> 
+
+
+
+
+
+
+
+
+
+    <body>
+
+        <div id="crystal" class="icon"></div>
+        <button type="button" id="btnCrystal">Crystal</button>
+
+        <div id="phone" class="icon"></div>
+        <button type="button" id="btnPhone">Phone</button>
+
+        <div id="location" class="icon"></div>
+
+        <div id="calendar" class="icon"></div>
+
+        <div id="account" class="icon"></div>
+
+        
+
+    </body>
+</html>
